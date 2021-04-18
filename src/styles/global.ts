@@ -1,4 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
+
+import 'antd/dist/antd.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default createGlobalStyle`
