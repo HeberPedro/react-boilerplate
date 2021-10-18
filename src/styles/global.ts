@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
-import 'antd/dist/antd.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'antd/dist/antd.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default createGlobalStyle`
     * {
@@ -35,4 +35,4 @@ export default createGlobalStyle`
     button {
         cursor: pointer;
     }
-`;
+`

@@ -1,10 +1,9 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-import { StoreState } from '../createStore';
-
-import auth from './auth/reducer';
+import { StoreState } from '../createStore'
+import auth from './auth/reducer'
 
 export default combineReducers<StoreState>({
-    auth,
-    _persist: (state: any = null) => state
-});
+  auth,
+  _persist: (state: any = null) => state,
+})

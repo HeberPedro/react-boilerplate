@@ -1,19 +1,19 @@
-import createSagaMiddleware from 'redux-saga';
-import { AnyAction, Middleware, Store } from 'redux';
-import { persistStore } from 'redux-persist';
+import { AnyAction, Middleware, Store } from 'redux'
+import { persistStore } from 'redux-persist'
+import createSagaMiddleware from 'redux-saga'
 
-import createStore from './createStore';
-import rootReducer from './modules/rootReducer';
-import rootSaga from './modules/rootSaga';
-import persistReducers from './persistReducers';
+import createStore from './createStore'
+import rootReducer from './modules/rootReducer'
+import rootSaga from './modules/rootSaga'
+import persistReducers from './persistReducers'
 
-const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware()
 
-const middlewares: Middleware[] = [sagaMiddleware];
+const middlewares: Middleware[] = [sagaMiddleware]
 
-const store = createStore(persistReducers(rootReducer), middlewares);
-const persistor = persistStore((store as unknown) as Store<any, AnyAction>);
+const store = createStore(persistReducers(rootReducer), middlewares)
+const persistor = persistStore((store as unknown) as Store<any, AnyAction>)
 
-sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga)
 
-export { store, persistor };
+export { store, persistor }
